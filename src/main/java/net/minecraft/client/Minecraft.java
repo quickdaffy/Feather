@@ -24,6 +24,7 @@ import java.util.concurrent.FutureTask;
 
 import javax.imageio.ImageIO;
 
+import me.quick.feather.api.event.impl.TickEvent;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.Validate;
 import org.apache.logging.log4j.LogManager;
@@ -1750,6 +1751,8 @@ public class Minecraft implements IThreadListener, IPlayerUsage
      */
     public void runTick() throws IOException
     {
+        Feather.INSTANCE.EVENT_BUS.callEvent(new TickEvent.ClientTickEvent());
+
         if (this.rightClickDelayTimer > 0)
         {
             --this.rightClickDelayTimer;
