@@ -1,4 +1,4 @@
-package me.quick.feather.api.event.bus;
+package me.quick.feather.event.bus;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

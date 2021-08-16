@@ -1,6 +1,6 @@
-package me.quick.feather.api.event.impl;
+package me.quick.feather.event.impl;
 
-import me.quick.feather.api.event.bus.Event;
+import me.quick.feather.event.bus.Event;
 
 public class TickEvent {
 
