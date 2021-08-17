@@ -19,25 +19,25 @@ public class ModManager {
    
    public void preInitMods() {
 	   for(FeatherModBase m : mods) {
-		   m.preInit();
+		   if (m != null) m.preInit();
 	   }
    }
    
    public void initMods() {
 	   for(FeatherModBase m : mods) {
-		   m.init();
+		   if (m != null) m.init();
 	   }
    }
    
    public void postInitMods() {
 	   for(FeatherModBase m : mods) {
-		   m.postInit();
+		   if (m != null) m.postInit();
 	   }
    }
    
    public void shutdownMods() {
 	   for(FeatherModBase m : mods) {
-		   m.shutdown();
+		   if (m != null) m.shutdown();
 	   }
    }
 

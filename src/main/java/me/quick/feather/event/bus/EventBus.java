@@ -36,8 +36,8 @@ public class EventBus {
                 if (m.getParameterTypes()[0].isInstance(e) && REGISTRY_MAP.get(m.getDeclaringClass()) != null) {
                     try {
                         m.invoke(REGISTRY_MAP.get(m.getDeclaringClass()).getDeclaringClass().newInstance(), e);
-                    } catch (IllegalAccessException | InvocationTargetException | InstantiationException illegalAccessException) {
-                        illegalAccessException.printStackTrace();
+                    } catch (IllegalAccessException | InvocationTargetException | InstantiationException ex) {
+                        ex.printStackTrace();
                     }
                 }
             }

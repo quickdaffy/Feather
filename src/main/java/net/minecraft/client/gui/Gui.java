@@ -17,7 +17,7 @@ public class Gui
     /**
      * Draw a 1 pixel wide horizontal line. Args: x1, x2, y, color
      */
-    protected void drawHorizontalLine(int startX, int endX, int y, int color)
+    public static void drawHorizontalLine(int startX, int endX, int y, int color)
     {
         if (endX < startX)
         {
@@ -32,7 +32,7 @@ public class Gui
     /**
      * Draw a 1 pixel wide vertical line. Args : x, y1, y2, color
      */
-    protected void drawVerticalLine(int x, int startY, int endY, int color)
+    public static void drawVerticalLine(int x, int startY, int endY, int color)
     {
         if (endY < startY)
         {

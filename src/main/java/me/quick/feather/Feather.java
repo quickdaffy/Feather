@@ -1,8 +1,6 @@
 package me.quick.feather;
 
-import me.quick.feather.api.event.bus.EventBus;
-import me.quick.feather.api.event.bus.SubscribeEvent;
-import me.quick.feather.api.event.impl.TickEvent;
+import me.quick.feather.event.bus.EventBus;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -38,7 +36,6 @@ public class Feather {
 	}
 	
 	public void postInit() {
-		
 		modManager.postInitMods();
 	}
 	
@@ -47,11 +44,4 @@ public class Feather {
 		
 		modManager.shutdownMods();
 	}
-
-	@SubscribeEvent
-	public void onTick(TickEvent.ClientTickEvent e) {
-		LOGGER.info("Client tick!");
-		EVENT_BUS.shutdown();
-	}
-
 }
