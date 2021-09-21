@@ -105,8 +105,7 @@ public class ModLoader {
 						else Feather.LOGGER.info("Failed to load mod " + jar.getName());
 
 				} catch (ClassNotFoundException e) {
-					// There might be multiple JARs in the directory, so keep looking
-					continue;
+					throw new ClassNotFoundException("Failed to find main class of mod " + jar.getName() + ". Skipping this mod.");
 				} catch (MalformedURLException | InvocationTargetException | IllegalAccessException | InstantiationException e) {
 					e.printStackTrace();
 				}
