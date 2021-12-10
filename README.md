@@ -5,7 +5,7 @@ It is a mod loader similar to fabric or forge, but aimed at only making PVP Clie
 Currently, we have the mod loading done (although it's not the best) and not much else.
 
 # UPDATE:
-A new PVP client featuring a modding system came out shortly after we started working on this.
+A new PVP client called "Feather" featuring a modding system came out shortly after we started working on this.
 It's interesting how unoriginal people can be. This project was primarily abandoned anyways.
 Kaimson is a clown.
 
